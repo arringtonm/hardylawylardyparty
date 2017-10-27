@@ -14,11 +14,12 @@
 
 .nav-bar li {
   font-family: $helvetica;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 800;
   color: $blue;
   display: inline-block;
   margin: 0px 0px 0px 50px;
+  // text-shadow: 1px 1px 1px transparent;
   &:hover {
     color: $grey;
     text-decoration: underline;

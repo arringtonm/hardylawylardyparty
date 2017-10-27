@@ -40,17 +40,6 @@ button {
   button:focus {
     outline: 0; }
 
-.container {
-  display: flex;
-  justify-content: center; }
-
-a {
-  color: cornflowerblue;
-  text-decoration: none; }
-  a:hover {
-    color: #666;
-    text-decoration: underline; }
-
 .title-bar {
   margin-top: 100px;
   width: 1000px;
@@ -81,6 +70,17 @@ a {
   padding: 0px 15px 0px 15px;
   text-align: center;
   transform: translateY(-22px); }
+
+.container {
+  display: flex;
+  justify-content: center; }
+
+a {
+  color: cornflowerblue;
+  text-decoration: none; }
+  a:hover {
+    color: #666;
+    text-decoration: underline; }
 
 .welcome-grid {
   display: flex;
@@ -124,7 +124,7 @@ a {
 
 .nav-bar li {
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 800;
   color: cornflowerblue;
   display: inline-block;
