@@ -14,10 +14,10 @@ a {
   margin-top: 100px;
   width: 1000px;
   height: 50px;
-  border: 2px solid $blue;
+  border: 2px solid $grey;
   // border-radius: 50% 50% 0 0;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   border-bottom: none;
   @include flexcenter(); }
 
@@ -25,10 +25,11 @@ a {
   margin-top: -40px;
   width: 1000px;
   height: 50px;
-  border: 2px solid $blue;
+  border: 2px solid $grey;
+  background: transparent;
   // border-radius: 50% 50% 0 0;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   border-top: none;
 }
 
@@ -45,16 +46,21 @@ a {
 .welcome-grid {
   @include grid-container;
   @include flexcenter();
+  // min-width: 980px;
   width: 980px;
   margin-left: auto;
   margin-right: auto;
   transform: translateY(-20px); }
 
 .feature-item {
+  // @include media($mobile);
   @include grid-column(3); }
 
 .left-item {
-  margin-left: 0; }
+  margin-left: 0;
+  // background-image: linear-gradient(to bottom,$white, $white,$blue,$white, $white);
+  }
 
 .feature-item-center {
+  // @include media($mobile);
   @include grid-column(6); }
