@@ -2,10 +2,14 @@
 @import "neat/neat.scss";
 @import "base/_reset.scss";
 @import "base/_base.scss";
+@import "base/_typography.scss";
 @import "utils/_mixins.scss";
 @import "utils/_variables.scss";
 @import "components/_components.scss";
 @import "components/_logo.scss";
+@import "components/_featureimg.scss";
+@import "components/_caption.scss";
 @import "layout/_layout.scss";
 @import "layout/_navbar.scss";
+@import "layout/_mainbody.scss";
 @import "vendors/_vendors.scss";

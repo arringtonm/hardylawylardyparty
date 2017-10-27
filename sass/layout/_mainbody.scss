@@ -1,0 +1,43 @@
+// body {
+//   background-color: rgba(100,149,237,0.01);
+// }
+
+.box {
+  width: 100%;
+  overflow: hidden; }
+
+.centered {
+  // display: flex;
+  text-align: center; }
+
+.box:not(:first-of-type) {
+  padding-top: 10px;
+  border-top: 1px solid $grey-lt;
+  margin-top: 10px; }
+
+.box p.title, p.title {
+  font-weight: bolder;
+  color: $grey;
+  font-family: $helvetica;
+  font-size: 16px;
+  margin-top: 0px; }
+
+.fake-link:hover {
+  color: $blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.box p {
+  margin-top: 10px;
+  color: $grey;
+  font-size: 12px;
+  font-weight: light;
+  font-family: $helvetica; }
+
+.lawsuits {
+  background-color: $blue;
+  color: $white;
+  padding: 0px 5px 0px 5px;
+  // margin-bottom: 30px;
+}

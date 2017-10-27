@@ -14,21 +14,25 @@
 
 .nav-bar li {
   font-family: $helvetica;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 800;
+  // text-decoration: underline;
   color: $grey;
   display: inline-block;
   margin: 0px 0px 0px 50px;
   &:hover {
     color: $blue;
+    text-decoration: underline;
     cursor: pointer; } }
 
 header {
   width: 100%;
   height: 80px;
+  // background-image: linear-gradient(100deg,$blue 24%, $grey-lt, $grey-lt, $grey-lt);
+  // background-image: linear-gradient(to right,$grey 30%, $grey-lt, $grey-lt, $grey-lt);
   background-color: $grey-lt;
   top: 0px;
   left: 0px;
   margin: 0px;
-  border-bottom: 1px solid $blue;
+  // border-bottom: 1px solid $blue;
   @include flexcenter(); }

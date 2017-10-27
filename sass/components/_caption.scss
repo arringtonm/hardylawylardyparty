@@ -1,0 +1,6 @@
+.caption {
+  @extend p;
+  font-style: italic;
+  // text-align: left;
+  transform: translateY(-25px);
+}
