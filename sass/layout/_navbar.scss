@@ -1,0 +1,34 @@
+.nav-bar-contents {
+  @include flexcenter();
+  width: 1000px;
+  justify-content: space-between;
+  align-items: center; }
+
+.nav-bar {
+  font-weight: bold;
+  display: flex; }
+
+.nav-bar ul {
+  width: 800px;
+  justify-content: space-between; }
+
+.nav-bar li {
+  font-family: $helvetica;
+  font-size: 11px;
+  font-weight: 800;
+  color: $grey;
+  display: inline-block;
+  margin: 0px 0px 0px 50px;
+  &:hover {
+    color: $blue;
+    cursor: pointer; } }
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: $grey-lt;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  border-bottom: 1px solid $blue;
+  @include flexcenter(); }
