@@ -4,5 +4,8 @@ img.logo {
   border: 2px solid $grey;
   border-radius: 0px 0px 10px 10px;
   transform: translateY(15px);
+  @media only screen and (max-width: 999px) {
+    border-bottom-left-radius: 0px;
+    border-left: 0px }
   @media only screen and (max-width: 480px) {
       display: none; } }

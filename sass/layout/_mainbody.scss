@@ -1,13 +1,7 @@
-
-
 .box {
-  overflow: visible;
-  flex: auto;
-  height: auto;
   max-width: 95vw; }
 
 .centered {
-  // display: flex;
   text-align: center; }
 
 .box:not(:first-of-type) {
@@ -22,17 +16,17 @@
   font-size: 16px;
   margin-top: 0px; }
 
-.fake-link:hover {
-  text-decoration: underline;
-  cursor: pointer;
-  transition: ease-in 300ms; }
-
 .box p {
   margin-top: 10px;
   color: $grey;
   font-size: 12px;
   font-weight: normal;
   font-family: $helvetica; }
+
+.fake-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: ease-in 300ms; }
 
 .lawsuits {
   background-color: $blue;

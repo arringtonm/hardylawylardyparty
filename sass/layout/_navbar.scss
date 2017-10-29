@@ -34,21 +34,9 @@
 header {
   width: 100%;
   height: 80px;
-  // background-color: $grey-lt;
   background-image: linear-gradient(to bottom, $white, $grey-lt);
   border-bottom: 1px solid $grey-lt;
   top: 0px;
   left: 0px;
   margin: 0px;
-  @include flexcenter(); }
-
-footer {
-  position: absolute;
-  width: 100%;
-  height: 40px;
-  // background-color: $grey-lt;
-  background-image: linear-gradient(to bottom, $grey-lt, $white);
-  bottom: 0px;
-  left: 0px;
-  margin-bottom: 0px;
   @include flexcenter(); }

@@ -1,5 +1,3 @@
-
-
 .container {
   @include flexcenter(); }
 
@@ -10,7 +8,6 @@ a {
     color: $grey;
     text-decoration: underline;
     transition: ease-in } }
-
 
 $custom-neat-grid: (
   columns: 12,
@@ -36,9 +33,7 @@ $custom-neat-grid: (
   @include grid-media($custom-neat-grid) {
   margin-top: 40px; } }
 
-
 .feature-item-center {
   @include grid-column(6);
   @include grid-media($custom-neat-grid){
-    // SHRUNK //
     display: none; } }

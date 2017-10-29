@@ -3,15 +3,11 @@
   width: 1000px;
   height: 50px;
   border: 2px solid $grey-md;
-  // border-radius: 50% 50% 0 0;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom: none;
   @include flexcenter();
-  @include grid-media($custom-neat-grid){
-    border-left: none;
-    border-right: none;
-    border-radius: none; } }
+  @include media999; }
 
 .title-bar-bottom {
   margin-top: -40px;
@@ -22,10 +18,7 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top: none;
-  @include grid-media($custom-neat-grid){
-    border-left: none;
-    border-right: none;
-    border-radius: none; } }
+  @include media999; }
 
 .title-bar-title {
   color: $grey;
@@ -37,5 +30,5 @@
   text-align: center;
   transform: translateY(-22px);
   @media only screen and (max-width: 600px) {
-      font-size: 20px;
+    font-size: 20px;
     transform: translateY(-12px); } }

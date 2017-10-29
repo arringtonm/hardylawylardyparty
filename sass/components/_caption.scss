@@ -9,6 +9,15 @@
   @media only screen and (max-width: 600px) {
       display: none; } }
 
+.caption-hidden {
+  @extend .caption;
+  display: none;
+  @media only screen and (max-width: 480px) {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    transform: translateY(40px);  } }
+
 .caption-feature {
   @extend .caption;
   transform: translateY(-25px); }
