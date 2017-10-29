@@ -1,24 +1,31 @@
 .title-bar {
-  margin-top: 100px;
+  margin-top: 70px;
   width: 1000px;
   height: 50px;
-  border: 2px solid $grey;
+  border: 2px solid $grey-md;
   // border-radius: 50% 50% 0 0;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom: none;
-  @include flexcenter(); }
+  @include flexcenter();
+  @include grid-media($custom-neat-grid){
+    border-left: none;
+    border-right: none;
+    border-radius: none; } }
 
 .title-bar-bottom {
   margin-top: -40px;
   width: 1000px;
   height: 50px;
-  border: 2px solid $grey;
+  border: 2px solid $grey-md ;
   background: transparent;
-  // border-radius: 50% 50% 0 0;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  border-top: none; }
+  border-top: none;
+  @include grid-media($custom-neat-grid){
+    border-left: none;
+    border-right: none;
+    border-radius: none; } }
 
 .title-bar-title {
   color: $grey;
@@ -28,4 +35,7 @@
   background-color: $white;
   padding: 0px 15px 0px 15px;
   text-align: center;
-  transform: translateY(-22px); }
+  transform: translateY(-22px);
+  @media only screen and (max-width: 600px) {
+      font-size: 20px;
+    transform: translateY(-12px); } }

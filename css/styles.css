@@ -4,11 +4,14 @@
   margin: 0; }
 
 img.logo {
-  height: 150px;
+  height: 110px;
   width: auto;
-  border: 1px solid #666;
+  border: 2px solid #666;
   border-radius: 0px 0px 10px 10px;
-  transform: translateY(35px); }
+  transform: translateY(15px); }
+  @media only screen and (max-width: 480px) {
+    img.logo {
+      display: none; } }
 
 img.feature {
   max-width: 100%;
@@ -17,8 +20,18 @@ img.feature {
   border: 1px solid #666;
   border-radius: 3px; }
 
-.caption {
+.caption, .caption-feature {
   font-style: italic;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  color: #666; }
+  @media only screen and (max-width: 999px) {
+    .caption, .caption-feature {
+      margin-left: 10px; } }
+  @media only screen and (max-width: 600px) {
+    .caption, .caption-feature {
+      display: none; } }
+
+.caption-feature {
   transform: translateY(-25px); }
 
 button {
@@ -27,49 +40,22 @@ button {
   font-size: 24px;
   padding: 15px;
   border-radius: 5px;
-  box-shadow: 1px 1px 5px #666;
+  box-shadow: 2px 2px 5px gray;
   border: 1px #EEE;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  transition: ease-in 200ms; }
   button:hover {
     background-image: none;
-    background-color: #666; }
+    background-color: #666;
+    box-shadow: 2px 2px 5px gray; }
   button:active {
+    background-color: gray;
     transform: translate(1px, 1px);
     box-shadow: 0px 0px 5px #666;
-    border: none; }
+    border: none;
+    transition: ease-in 100ms; }
   button:focus {
     outline: 0; }
-
-.title-bar {
-  margin-top: 100px;
-  width: 1000px;
-  height: 50px;
-  border: 2px solid #666;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom: none;
-  display: flex;
-  justify-content: center; }
-
-.title-bar-bottom {
-  margin-top: -40px;
-  width: 1000px;
-  height: 50px;
-  border: 2px solid #666;
-  background: transparent;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-top: none; }
-
-.title-bar-title {
-  color: #666;
-  font-style: italic;
-  font-size: 30px;
-  font-weight: bolder;
-  background-color: white;
-  padding: 0px 15px 0px 15px;
-  text-align: center;
-  transform: translateY(-22px); }
 
 .container {
   display: flex;
@@ -80,14 +66,17 @@ a {
   text-decoration: none; }
   a:hover {
     color: #666;
-    text-decoration: underline; }
+    text-decoration: underline;
+    transition: ease-in; }
 
 .welcome-grid {
   display: flex;
   justify-content: center;
   width: 980px;
+  height: auto !important;
   margin-left: auto;
   margin-right: auto;
+  flex-wrap: wrap;
   transform: translateY(-20px); }
   .welcome-grid::after {
     clear: both;
@@ -98,14 +87,21 @@ a {
   width: calc(25% - 25px);
   float: left;
   margin-left: 20px; }
+  @media only screen and (max-width: 999px) {
+    .feature-item {
+      width: 100%; } }
 
-.left-item {
-  margin-left: 0; }
+@media only screen and (max-width: 999px) {
+  .feature-item:not(:first-of-type) {
+    margin-top: 40px; } }
 
 .feature-item-center {
   width: calc(50% - 30px);
   float: left;
   margin-left: 20px; }
+  @media only screen and (max-width: 999px) {
+    .feature-item-center {
+      display: none; } }
 
 .nav-bar-contents {
   display: flex;
@@ -113,6 +109,9 @@ a {
   width: 1000px;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 600px) {
+    .nav-bar-contents {
+      margin: 0px; } }
 
 .nav-bar {
   font-weight: bold;
@@ -121,6 +120,9 @@ a {
 .nav-bar ul {
   width: 800px;
   justify-content: space-between; }
+  @media only screen and (max-width: 800px) {
+    .nav-bar ul {
+      width: 100%; } }
 
 .nav-bar li {
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
@@ -129,15 +131,20 @@ a {
   color: cornflowerblue;
   display: inline-block;
   margin: 0px 0px 0px 50px; }
+  @media only screen and (max-width: 800px) {
+    .nav-bar li {
+      margin: 0px 10px 0px 10px; } }
   .nav-bar li:hover {
     color: #666;
     text-decoration: underline;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: ease-in 300ms; }
 
 header {
   width: 100%;
   height: 80px;
-  background-color: #EEE;
+  background-image: linear-gradient(to bottom, white, #EEE);
+  border-bottom: 1px solid #EEE;
   top: 0px;
   left: 0px;
   margin: 0px;
@@ -148,16 +155,63 @@ footer {
   position: absolute;
   width: 100%;
   height: 40px;
-  background-color: #EEE;
+  background-image: linear-gradient(to bottom, #EEE, white);
   bottom: 0px;
   left: 0px;
   margin-bottom: 0px;
   display: flex;
   justify-content: center; }
 
+.title-bar {
+  margin-top: 70px;
+  width: 1000px;
+  height: 50px;
+  border: 2px solid #999;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: none;
+  display: flex;
+  justify-content: center; }
+  @media only screen and (max-width: 999px) {
+    .title-bar {
+      border-left: none;
+      border-right: none;
+      border-radius: none; } }
+
+.title-bar-bottom {
+  margin-top: -40px;
+  width: 1000px;
+  height: 50px;
+  border: 2px solid #999;
+  background: transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: none; }
+  @media only screen and (max-width: 999px) {
+    .title-bar-bottom {
+      border-left: none;
+      border-right: none;
+      border-radius: none; } }
+
+.title-bar-title {
+  color: #666;
+  font-style: italic;
+  font-size: 30px;
+  font-weight: bolder;
+  background-color: white;
+  padding: 0px 15px 0px 15px;
+  text-align: center;
+  transform: translateY(-22px); }
+  @media only screen and (max-width: 600px) {
+    .title-bar-title {
+      font-size: 20px;
+      transform: translateY(-12px); } }
+
 .box {
-  width: 100%;
-  overflow: hidden; }
+  overflow: visible;
+  flex: auto;
+  height: auto;
+  max-width: 95vw; }
 
 .centered {
   text-align: center; }
@@ -167,7 +221,7 @@ footer {
   border-top: 1px solid #EEE;
   margin-top: 10px; }
 
-.box p.title, .box .title.caption, p.title, .title.caption {
+.box p.title, .box .title.caption, .box .title.caption-feature, p.title, .title.caption, .title.caption-feature {
   font-weight: bolder;
   color: #666;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
@@ -175,15 +229,15 @@ footer {
   margin-top: 0px; }
 
 .fake-link:hover {
-  color: cornflowerblue;
   text-decoration: underline;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: ease-in 300ms; }
 
-.box p, .box .caption {
+.box p, .box .caption, .box .caption-feature {
   margin-top: 10px;
   color: #666;
   font-size: 12px;
-  font-weight: light;
+  font-weight: normal;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
 
 .lawsuits {

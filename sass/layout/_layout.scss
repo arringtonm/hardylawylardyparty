@@ -8,26 +8,37 @@ a {
   text-decoration: none;
   &:hover {
     color: $grey;
-    text-decoration: underline; } }
+    text-decoration: underline;
+    transition: ease-in } }
+
+
+$custom-neat-grid: (
+  columns: 12,
+  gutter: 0.5em,
+  media: 'only screen and (max-width: 999px)');
 
 .welcome-grid {
   @include grid-container;
   @include flexcenter();
-  // min-width: 980px;
   width: 980px;
+  height: auto !important;
   margin-left: auto;
   margin-right: auto;
+  flex-wrap: wrap;
   transform: translateY(-20px); }
 
 .feature-item {
-  // @include media($mobile);
-  @include grid-column(3); }
+  @include grid-column(3);
+  @include grid-media($custom-neat-grid){
+  width: 100%; } }
 
-.left-item {
-  margin-left: 0;
-  // background-image: linear-gradient(to bottom,$white, $white,$blue,$white, $white);
-  }
+.feature-item:not(:first-of-type) {
+  @include grid-media($custom-neat-grid) {
+  margin-top: 40px; } }
+
 
 .feature-item-center {
-  // @include media($mobile);
-  @include grid-column(6); }
+  @include grid-column(6);
+  @include grid-media($custom-neat-grid){
+    // SHRUNK //
+    display: none; } }

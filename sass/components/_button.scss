@@ -1,18 +1,23 @@
 button {
+  // background-image: linear-gradient(lighten($blue,10%),$blue 90%);
   background-color: $blue;
   color: $white;
   font-size: 24px;
   padding: 15px;
   border-radius: 5px;
-  box-shadow: 1px 1px 5px $grey;
+  box-shadow: 2px 2px 5px lighten($grey,10%);
   border: 1px $grey-lt;
   margin-bottom: 10px;
   &:hover {
     background-image: none;
-    background-color: $grey; }
+    background-color: $grey;
+    box-shadow: 2px 2px 5px lighten($grey,10%); }
+    transition: ease-in 200ms;
   &:active {
+    background-color: lighten($grey,10%);
     transform: translate(1px,1px);
     box-shadow: 0px 0px 5px $grey;
-    border: none; }
+    border: none;
+    transition: ease-in 100ms; }
   &:focus {
     outline: 0; } }

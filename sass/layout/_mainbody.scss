@@ -1,8 +1,10 @@
 
 
 .box {
-  width: 100%;
-  overflow: hidden; }
+  overflow: visible;
+  flex: auto;
+  height: auto;
+  max-width: 95vw; }
 
 .centered {
   // display: flex;
@@ -21,21 +23,18 @@
   margin-top: 0px; }
 
 .fake-link:hover {
-  color: $blue;
   text-decoration: underline;
   cursor: pointer;
-}
+  transition: ease-in 300ms; }
 
 .box p {
   margin-top: 10px;
   color: $grey;
   font-size: 12px;
-  font-weight: light;
+  font-weight: normal;
   font-family: $helvetica; }
 
 .lawsuits {
   background-color: $blue;
   color: $white;
-  padding: 0px 5px 0px 5px;
-  // margin-bottom: 30px;
-}
+  padding: 0px 5px 0px 5px; }

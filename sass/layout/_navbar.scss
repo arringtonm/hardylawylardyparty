@@ -2,7 +2,9 @@
   @include flexcenter();
   width: 1000px;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  @media only screen and (max-width: 600px) {
+      margin: 0px; } }
 
 .nav-bar {
   font-weight: bold;
@@ -10,7 +12,9 @@
 
 .nav-bar ul {
   width: 800px;
-  justify-content: space-between; }
+  justify-content: space-between;
+  @media only screen and (max-width: 800px) {
+        width: 100%; } }
 
 .nav-bar li {
   font-family: $helvetica;
@@ -19,16 +23,20 @@
   color: $blue;
   display: inline-block;
   margin: 0px 0px 0px 50px;
-  // text-shadow: 1px 1px 1px transparent;
+  @media only screen and (max-width: 800px) {
+      margin: 0px 10px 0px 10px; }
   &:hover {
     color: $grey;
     text-decoration: underline;
-    cursor: pointer; } }
+    cursor: pointer;
+    transition: ease-in 300ms; } }
 
 header {
   width: 100%;
   height: 80px;
-  background-color: $grey-lt;
+  // background-color: $grey-lt;
+  background-image: linear-gradient(to bottom, $white, $grey-lt);
+  border-bottom: 1px solid $grey-lt;
   top: 0px;
   left: 0px;
   margin: 0px;
@@ -38,7 +46,8 @@ footer {
   position: absolute;
   width: 100%;
   height: 40px;
-  background-color: $grey-lt;
+  // background-color: $grey-lt;
+  background-image: linear-gradient(to bottom, $grey-lt, $white);
   bottom: 0px;
   left: 0px;
   margin-bottom: 0px;
