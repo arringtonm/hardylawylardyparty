@@ -7,6 +7,7 @@ img.logo {
   height: 110px;
   width: auto;
   border: 2px solid #666;
+  border-top: none;
   border-radius: 0px 0px 10px 10px;
   transform: translateY(15px); }
   @media only screen and (max-width: 999px) {
@@ -26,7 +27,7 @@ img.feature {
 
 img.feature-hidden {
   display: none; }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 999px) {
     img.feature-hidden {
       width: 100%;
       margin-bottom: -30px;
@@ -45,7 +46,7 @@ img.feature-hidden {
 
 .caption-hidden {
   display: none; }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 599px) {
     .caption-hidden {
       display: block;
       text-align: center;
@@ -139,7 +140,7 @@ a {
   display: flex; }
 
 .nav-bar ul {
-  width: 800px;
+  width: 600px;
   justify-content: space-between; }
   @media only screen and (max-width: 800px) {
     .nav-bar ul {
@@ -218,7 +219,8 @@ header {
       transform: translateY(-12px); } }
 
 .box {
-  max-width: 95vw; }
+  max-width: 95vw;
+  padding-right: 20px; }
 
 .centered {
   text-align: center; }
